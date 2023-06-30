@@ -1,8 +1,6 @@
-import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Layout } from './components/Layout/Layout'
 import Home from './components/question/Home'
-import StartQuize from './components/question/StartQuize'
 import ServiceType from './components/question/ServiceType'
 import ProjectType from './components/question/ProjectType'
 import Timeframe from './components/question/Timeframe'
@@ -20,7 +18,6 @@ function App() {
             <Routes>
                 <Route element={<Layout />}>
                     <Route path='/' element={<Home />} />
-                    <Route path='/startQuize' element={<StartQuize />} />
                     <Route path='/services' element={<ServiceType />} />
                     <Route path='/project-type' element={<ProjectType />} />
                     <Route path='/timeframe' element={<Timeframe />} />

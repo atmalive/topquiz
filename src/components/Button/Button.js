@@ -1,14 +1,16 @@
 import React from 'react';
 
-const Button = ({ title, size }) => {
+const Button = ({ title, sizeW, sizeH, handleNext }) => {
     const buttonStyles = {
         display: 'flex',
         alignItems: 'center',
+        maxWidth: '100px',
         justifyContent: 'center',
-        padding: `${size}rem ${size}rem`,
+        padding: `${sizeW}px ${sizeH}px`,
         background: 'linear-gradient(to right, #ffa311, #ffd928)',
         borderRadius: '0.25rem',
         outline: 'none',
+        color: 'black',
     };
 
     const svgStyles = {
@@ -16,9 +18,12 @@ const Button = ({ title, size }) => {
         height: '18px',
         marginLeft: '0.5rem',
     };
+    const handleButton = () => {
+        handleNext();
+    };
 
     return (
-        <button style={buttonStyles}>
+        <button style={buttonStyles} onClick={handleButton}>
             <span className='text-base font-semibold'>{title}</span>
             <svg
                 xmlns="http://www.w3.org/2000/svg"

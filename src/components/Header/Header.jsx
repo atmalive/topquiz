@@ -20,15 +20,6 @@ export const Header = () => {
                         </li>
                         <li>
                             <Link
-                                to={'/StartQuize'}
-                                className='text-base font-normal text-gray-500 list-none hover:text-gray-900'
-                                target=''
-                            >
-                                StartQuize
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
                                 to={'/services'}
                                 className='text-base font-normal text-gray-500 list-none hover:text-gray-900'
                                 target=''
@@ -38,7 +29,7 @@ export const Header = () => {
                         </li>
                         <li>
                             <Link
-                                to={'/ProjectType'}
+                                to={'/project-type'}
                                 className='text-base font-normal text-gray-500 list-none hover:text-gray-900'
                                 target=''
                             >

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import logo from '../../image/logo.png'
 import { useQuiz } from '../../utils/QuizeContext'
+import Button from '../Button/Button'
 
 const ServiceType = () => {
     const navigate = useNavigate()
@@ -50,12 +51,7 @@ const ServiceType = () => {
                 </div>
             ))}
             <hr className='my-4' />
-            <button
-                onClick={handleNext}
-                className='bg-white text-blue-500 px-4 py-2 rounded shadow hover:bg-blue-300 hover:text-white transition duration-200'
-            >
-                Next
-            </button>
+            <Button handleNext={handleNext} title={'Next'} sizeW={8} sizeH={18}/>
         </div>
     )
 }
