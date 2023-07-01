@@ -8,7 +8,7 @@ export const Header = () => {
                     className='relative flex items-center justify-between sm:h-16 md:justify-center'
                     aria-label='Global'
                 >
-                    <div className='hidden md:flex md:space-x-10 list-none'>
+                    <div className='hidden md:flex gap-3 list-none'>
                         <li>
                             <Link
                                 to={'/'}
@@ -88,6 +88,15 @@ export const Header = () => {
                                 target=''
                             >
                                 Source
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to={'/thank-you'}
+                                className='text-base font-normal text-gray-500 list-none hover:text-gray-900'
+                                target=''
+                            >
+                                Finish
                             </Link>
                         </li>
                     </div>

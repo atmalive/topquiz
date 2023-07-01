@@ -10,7 +10,7 @@ import Devices from './components/question/Devices'
 import Industries from './components/question/Industries'
 import Source from './components/question/Source'
 import { QuizProvider } from './utils/QuizeContext'
-import ThankYou from './components/question/ThankYou'
+import SignUpForm from './components/question/SignUpForm'
 
 function App() {
     return (
@@ -26,7 +26,7 @@ function App() {
                     <Route path='/devices' element={<Devices />} />
                     <Route path='/industries' element={<Industries />} />
                     <Route path='/source' element={<Source />} />
-                    <Route path='/thank-you' element={<ThankYou />} />
+                    <Route path='/thank-you' element={<SignUpForm />} />
                 </Route>
             </Routes>
         </QuizProvider>
