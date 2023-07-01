@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useQuiz } from '../../utils/QuizeContext'
 import Button from '../Button/Button'
@@ -11,19 +11,18 @@ const SignUpForm = () => {
         Name: '',
         Email: '',
         Company: '',
-        PhoneNumber: ''
+        PhoneNumber: '',
     })
 
     const handleChange = (event) => {
-        setFormData({ ...formData, [event.target.name]: event.target.value });
+        setFormData({ ...formData, [event.target.name]: event.target.value })
     }
 
     const handleNext = () => {
-        // Save answers and navigate to the next page.
         for (const field in formData) {
             saveAnswer(field, formData[field])
         }
-        navigate('/thank-you') // replace '/thank-you' with the actual path
+        navigate('/thank-you')
     }
 
     return (
@@ -33,7 +32,10 @@ const SignUpForm = () => {
             <h1 className='text-xl mb-4'>Success! Let`s connect you with talent.</h1>
             {Object.keys(formData).map((field) => (
                 <div key={field} className='mb-2'>
-                    <label htmlFor={field} className='text-sm text-gray-300 font-light opacity-80 m-2'>
+                    <label
+                        htmlFor={field}
+                        className='text-sm text-gray-300 font-light opacity-80 m-2'
+                    >
                         {field}
                     </label>
                     <input
@@ -49,7 +51,9 @@ const SignUpForm = () => {
             ))}
             <p className='text-sm mb-4 text-gray-500'>
                 By completing signup, you are agreeing to
-                <a href="/terms-of-service" className="text-white underline ml-2">Terms of Service</a>
+                <a href='/terms-of-service' className='text-white underline ml-2'>
+                    Terms of Service
+                </a>
             </p>
             <hr className='my-4 opacity-30' />
             <div className='w-full flex justify-end'>

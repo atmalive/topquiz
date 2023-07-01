@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Button = ({ title, sizeW, sizeH, handleNext }) => {
     const buttonStyles = {
         display: 'flex',

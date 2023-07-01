@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useQuiz } from '../../utils/QuizeContext'
 import Button from '../Button/Button'
@@ -25,7 +25,7 @@ const Budget = () => {
 
     const handleNext = () => {
         saveAnswer('budget', selectedBudget)
-        navigate('/capabilities') // replace '/capabilities' with the actual path
+        navigate('/capabilities')
     }
 
     return (
@@ -50,7 +50,7 @@ const Budget = () => {
             ))}
             <hr className='my-4 opacity-30' />
             <div className='w-full flex justify-between'>
-               <BackButton />
+                <BackButton />
                 <Button handleNext={handleNext} title={'Next'} sizeW={8} sizeH={18} />
             </div>
         </div>

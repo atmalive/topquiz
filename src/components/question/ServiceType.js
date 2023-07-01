@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import logo from '../../image/logo.png'
 import { useQuiz } from '../../utils/QuizeContext'

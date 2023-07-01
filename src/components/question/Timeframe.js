@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useQuiz } from '../../utils/QuizeContext'
 import Button from '../Button/Button'
@@ -24,7 +24,7 @@ const Timeframe = () => {
 
     const handleNext = () => {
         saveAnswer('timeframe', selectedTimeframe)
-        navigate('/budget') // replace '/budget' with the actual path
+        navigate('/budget')
     }
 
     return (

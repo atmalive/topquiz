@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useQuiz } from '../../utils/QuizeContext'
 import Button from '../Button/Button'
@@ -14,14 +14,14 @@ const Capabilities = () => {
         'Teamwork',
         'Communication',
         'Problem Solving',
-        // Add more soft skills here...
+
     ]
 
     const hardSkills = [
         'JavaScript',
         'Node.JS',
         'React',
-        // Add more hard skills here...
+
     ]
 
     const [selectedSkills, setSelectedSkills] = useState([])
@@ -47,7 +47,7 @@ const Capabilities = () => {
 
     const handleNext = () => {
         saveAnswer('capabilities', selectedSkills)
-        navigate('/devices') // replace '/devices' with the actual path
+        navigate('/devices')
     }
 
     const handleSkillTypeChange = (type) => {
@@ -103,13 +103,22 @@ const Capabilities = () => {
             <div>
                 <div className='flex justify-start gap-3'>
                     <h2 className='text-xl mb-2'>Popular Skills:</h2>
-                    <div className='flex justify-center items-start pt-1' style={{
-                        background: 'linear-gradient(to right, #ffa311, #ffd928)',
-                        WebkitBackgroundClip: 'text',
-                        color: 'transparent' }}>
+                    <div
+                        className='flex justify-center items-start pt-1'
+                        style={{
+                            background: 'linear-gradient(to right, #ffa311, #ffd928)',
+                            WebkitBackgroundClip: 'text',
+                            color: 'transparent',
+                        }}
+                    >
                         <text>SOFT DEVELOPER</text>
-                        <svg className='pt-1' width="18" height="18" viewBox="0 0 18 18">
-                            <path d="M4.5 6l4.5 4.5L13.5 6" stroke="#2F3435" strokeWidth="2" strokeLinecap="square" />
+                        <svg className='pt-1' width='18' height='18' viewBox='0 0 18 18'>
+                            <path
+                                d='M4.5 6l4.5 4.5L13.5 6'
+                                stroke='#2F3435'
+                                strokeWidth='2'
+                                strokeLinecap='square'
+                            />
                         </svg>
                     </div>
                 </div>
@@ -118,7 +127,7 @@ const Capabilities = () => {
                     {skills.slice(0, 10).map(
                         (
                             skill,
-                            index, // display top 10 skills based on the current type
+                            index,
                         ) => (
                             <button
                                 className='text-white py-1 px-3 rounded-full border border-white opacity-80'

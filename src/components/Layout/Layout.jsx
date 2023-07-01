@@ -1,4 +1,3 @@
-import { Footer } from '../Footer/Footer.jsx'
 import { Outlet, useLocation } from 'react-router-dom'
 import SideBar from '../SideBar/SideBar'
 import { Header } from '../Header/Header'

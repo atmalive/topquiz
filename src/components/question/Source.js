@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useQuiz } from '../../utils/QuizeContext'
 import Button from '../Button/Button'
@@ -9,13 +9,7 @@ const Source = () => {
     const navigate = useNavigate()
     const { saveAnswer } = useQuiz()
 
-    const sources = [
-        'Referral/ Word of mouth',
-        'Clutch',
-        'Google Search',
-        'LinkedIn',
-        'Other',
-    ]
+    const sources = ['Referral/ Word of mouth', 'Clutch', 'Google Search', 'LinkedIn', 'Other']
 
     const [selectedSource, setSelectedSource] = useState('')
 
@@ -25,7 +19,7 @@ const Source = () => {
 
     const handleNext = () => {
         saveAnswer('source', selectedSource)
-        navigate('/thank-you') // replace '/thank-you' with the actual path
+        navigate('/thank-you')
     }
 
     return (

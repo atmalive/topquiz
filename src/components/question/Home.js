@@ -1,5 +1,3 @@
-// Home.js
-import React from 'react'
 import logo from '../../image/logo.png'
 import Button from '../Button/Button'
 import { useNavigate } from 'react-router-dom'

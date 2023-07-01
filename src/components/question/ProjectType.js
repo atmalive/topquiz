@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import logo from '../../image/logo.png'
 import { useQuiz } from '../../utils/QuizeContext'
@@ -18,7 +18,7 @@ const ProjectType = () => {
 
     const handleNext = () => {
         saveAnswer('projectType', selectedProjectType)
-        navigate('/timeframe') // replace '/next-page' with the actual path
+        navigate('/timeframe')
     }
 
     return (

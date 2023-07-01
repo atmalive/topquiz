@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useQuiz } from '../../utils/QuizeContext'
 import Button from '../Button/Button'
@@ -23,16 +23,16 @@ const Industries = () => {
     const [selectedIndustries, setSelectedIndustries] = useState([])
 
     const handleCheckboxChange = (industry) => {
-        setSelectedIndustries(prevIndustries =>
+        setSelectedIndustries((prevIndustries) =>
             prevIndustries.includes(industry)
-                ? prevIndustries.filter(i => i !== industry)
-                : [...prevIndustries, industry]
+                ? prevIndustries.filter((i) => i !== industry)
+                : [...prevIndustries, industry],
         )
     }
 
     const handleNext = () => {
         saveAnswer('industries', selectedIndustries)
-        navigate('/source') // replace '/source' with the actual path
+        navigate('/source')
     }
 
     return (
