@@ -16,7 +16,7 @@ const SideBar = () => {
     const { answers } = useQuiz() // access the saved answers
 
     return (
-        <div className='min-h-screen bg-[#f1f5f8] items-center'>
+        <div className='min-h-screen bg-[#f1f5f8] items-center hidden  lg:block'>
             {isHome && (
                 <div className='min-h-screen relative w-80 max-w-sm flex flex-col justify-center items-center gap-6 '>
                     <h2 className='text-gray-700 opacity-60 text-xl'>TRUSTED BY</h2>
