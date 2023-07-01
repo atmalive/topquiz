@@ -40,7 +40,8 @@ const SideBar = () => {
                         answers[question] && (
                             <div key={question} className='relative pl-9'>
                                 <h2 className='text-neutral-900 font-bold'>{question}</h2>
-                                <p>{answers[question].toString()}</p>
+                                <div className='flex flex-wrap w-full'> <p>{answers[question].toString() }</p></div>
+
                                 <div className='triangle-right absolute left-0 top-2'></div>
                             </div>
                         )
